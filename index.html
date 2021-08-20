@@ -1,10 +1,47 @@
 <html>
     <head>
-        <title>
-
-        </title>
+        <title>iMac</title>
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <!-- custom css -->
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
+        <section class="container d-flex align-items-center">
+            <div>
+                <img class="img-fluid" src="apple.jpg">
+            </div>
+            <div>
+                <h1>Buy the all-new 24” iMac.</h1>
+                <p>Say hello to the new iMac. Inspired by the best of Apple. Transformed by the M1 chip. Stands out in any space. Fits perfectly into your life.</p>
+                <div>
+                    <h5>Memory</h5>
+                    <button id="baseMemory">8GB Memory</button>
+                    <button id="extendedMemory">16GB Memory</button>
+                </div>
+                <div class="my-3">
+                    <h5>Storage</h5>
+                    <button id="baseStorage">256GB SSD Storage</button>
+                    <button id="extraStorage">512GB SSD Storage</button>
+                    <button id="extendedStorage">1TB SSD Storage</button>
+                </div>
+                <div>
+                    <h5>Delivery Option</h5>
+                    <button id="freeDelivery">Free</button>
+                    <button id="expressDelivery">Express</button>
+                </div>
+                <div class="mt-5">
+                    <h5>Base Price $<span>1299</span></h5>
+                    <h5>Extra Memory $<span id="memoryCost">0</span></h5>
+                    <h5>Extra Storage $<span id="storageCost">0</span></h5>
+                    <h5>Delivery $<span id="deliveryCost">0</span></h5>
+                    <h5>Total Price $<span id="totalPrice">1299</span></h5>
+                </div>
+            </div>
+        </section>
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- custom js -->
+        <script src="script.js"></script>
     </body>
 </html>
