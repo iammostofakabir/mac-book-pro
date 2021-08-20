@@ -7,35 +7,56 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <section class="container d-flex align-items-center">
-            <div>
-                <img class="img-fluid" src="apple.jpg">
-            </div>
-            <div>
-                <h1>Buy the all-new 24” iMac.</h1>
-                <p>Say hello to the new iMac. Inspired by the best of Apple. Transformed by the M1 chip. Stands out in any space. Fits perfectly into your life.</p>
+        <section>
+            <div class="container d-flex align-items-center h-100">
+                <!-- left side -->
                 <div>
-                    <h5>Memory</h5>
-                    <button id="baseMemory">8GB Memory</button>
-                    <button id="extendedMemory">16GB Memory</button>
+                    <img class="img-fluid" src="apple.jpg">
                 </div>
-                <div class="my-3">
-                    <h5>Storage</h5>
-                    <button id="baseStorage">256GB SSD Storage</button>
-                    <button id="extraStorage">512GB SSD Storage</button>
-                    <button id="extendedStorage">1TB SSD Storage</button>
-                </div>
+                <!-- right side -->
                 <div>
-                    <h5>Delivery Option</h5>
-                    <button id="freeDelivery">Free</button>
-                    <button id="expressDelivery">Express</button>
-                </div>
-                <div class="mt-5">
-                    <h5>Base Price $<span>1299</span></h5>
-                    <h5>Extra Memory $<span id="memoryCost">0</span></h5>
-                    <h5>Extra Storage $<span id="storageCost">0</span></h5>
-                    <h5>Delivery $<span id="deliveryCost">0</span></h5>
-                    <h5>Total Price $<span id="totalPrice">1299</span></h5>
+                    <!-- heading -->
+                    <div>
+                        <h1>Buy the all-new 24” iMac.</h1>
+                        <p>Say hello to the new iMac. Inspired by the best of Apple. Transformed by the M1 chip. Stands out in any space. Fits perfectly into your life.</p>
+                    </div>
+                    <!-- memory -->
+                    <div class="mt-5">
+                        <h5>Memory</h5>
+                        <button id="baseMemory" disabled>8GB Memory</button>
+                        <button id="extendedMemory">16GB Memory</button>
+                    </div>
+                    <!-- storage -->
+                    <div class="my-3">
+                        <h5>Storage</h5>
+                        <button id="baseStorage" disabled>256GB SSD Storage</button>
+                        <button id="extraStorage">512GB SSD Storage</button>
+                        <button id="extendedStorage">1TB SSD Storage</button>
+                    </div>
+                    <!-- delivery -->
+                    <div>
+                        <h5>Delivery Option</h5>
+                        <button id="freeDelivery" disabled>Free</button>
+                        <button id="expressDelivery">Express</button>
+                    </div>
+                    <!-- total -->
+                    <div class="my-5">
+                        <h5>Base Price $<span id="basePrice">1299</span></h5>
+                        <h5>Extra Memory $<span id="memoryCost">0</span></h5>
+                        <h5>Extra Storage $<span id="storageCost">0</span></h5>
+                        <h5>Delivery $<span id="deliveryCost">0</span></h5>
+                        <h5>Total Price $<span id="totalPrice">1299</span></h5>
+                    </div>
+                    <!-- promo -->
+                    <div>
+                        <div class="my-5">
+                            <input id="promoCode" type="text">
+                            <button id="promoButton">Apply Promo Code</button>
+                        </div>
+                        <div>
+                            <h5>After Discount Price $<span id="afterDiscount">1299</span></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
