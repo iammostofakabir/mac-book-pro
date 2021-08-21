@@ -8,10 +8,18 @@ function totalPrice() {
 }
 
 
-// click button function
 
-function cickButton(btn1,btn2){
-    document.getElementById(btn).disabled = true;
+// clicked button disable function
+
+function clickButton(){
+    for(let i = 0; i < arguments.length; i++){
+        if(i==0){
+            document.getElementById(arguments[i]).disabled = true;
+        }
+        else{
+            document.getElementById(arguments[i]).disabled = false;
+        }
+    }
 }
 
 
@@ -21,17 +29,13 @@ function cickButton(btn1,btn2){
 document.getElementById('baseMemory').addEventListener('click', function () {
     document.getElementById('memoryCost').innerText = 0;
     totalPrice();
-
-    document.getElementById('baseMemory').disabled = true;
-    document.getElementById('extendedMemory').disabled = false;
+    clickButton('baseMemory','extendedMemory');
 });
 
 document.getElementById('extendedMemory').addEventListener('click', function () {
     document.getElementById('memoryCost').innerText = 180;
     totalPrice();
-
-    document.getElementById('baseMemory').disabled = false;
-    document.getElementById('extendedMemory').disabled = true;
+    clickButton('extendedMemory','baseMemory');
 });
 
 
@@ -41,26 +45,17 @@ document.getElementById('extendedMemory').addEventListener('click', function () 
 document.getElementById('baseStorage').addEventListener('click', function () {
     document.getElementById('storageCost').innerText = 0;
     totalPrice();
-
-    document.getElementById('baseStorage').disabled = true;
-    document.getElementById('extraStorage').disabled = false;
-    document.getElementById('extendedStorage').disabled = false;
+    clickButton('baseStorage','extraStorage','extendedStorage');
 });
 document.getElementById('extraStorage').addEventListener('click', function () {
     document.getElementById('storageCost').innerText = 100;
     totalPrice();
-
-    document.getElementById('baseStorage').disabled = false;
-    document.getElementById('extraStorage').disabled = true;
-    document.getElementById('extendedStorage').disabled = false;
+    clickButton('extraStorage','baseStorage','extendedStorage');
 });
 document.getElementById('extendedStorage').addEventListener('click', function () {
     document.getElementById('storageCost').innerText = 180;
     totalPrice();
-
-    document.getElementById('baseStorage').disabled = false;
-    document.getElementById('extraStorage').disabled = false;
-    document.getElementById('extendedStorage').disabled = true;
+    clickButton('extendedStorage','baseStorage','extraStorage');
 });
 
 
@@ -70,17 +65,13 @@ document.getElementById('extendedStorage').addEventListener('click', function ()
 document.getElementById('freeDelivery').addEventListener('click', function () {
     document.getElementById('deliveryCost').innerText = 0;
     totalPrice();
-
-    document.getElementById('freeDelivery').disabled = true;
-    document.getElementById('expressDelivery').disabled = false;
+    clickButton('freeDelivery','expressDelivery');
 });
 
 document.getElementById('expressDelivery').addEventListener('click', function () {
     document.getElementById('deliveryCost').innerText = 20;
     totalPrice();
-
-    document.getElementById('freeDelivery').disabled = false;
-    document.getElementById('expressDelivery').disabled = true;
+    clickButton('expressDelivery','freeDelivery');
 });
 
 
