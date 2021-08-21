@@ -82,6 +82,7 @@ document.getElementById('promoButton').addEventListener('click', function () {
     if (document.getElementById('promoCode').value == 'stevekaku') {
         document.getElementById('afterDiscount').innerText = parseFloat(document.getElementById('totalPrice').innerText) * 0.8;
         document.getElementById('promoCode').value = '';
+        document.getElementById('promoButton').disabled = true;
     }
     else {
         document.getElementById('promoCode').value = '';
